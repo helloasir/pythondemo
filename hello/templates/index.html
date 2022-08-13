@@ -2,10 +2,48 @@
 {% load static %}
 {% block content %}
 
-<div class="jumbotron text-center">
-  <h1> This is Python Demo</h1>
-</div>
-
-{% extends "footer.html" %}
+<div class="container my-3 px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 ">
+  <div class="col-lg-8">
+  <h1>UAE VAT Tax Calculator</h1>
+  <section class="instructions padding">
+  <p>Enter the value and press enter or click calculate button to see VAT percentage.</p>
+  </section>
+  <section class="calculator-form">
+  <form id="formnds" onSubmit="if (!window.__cfRLUnblockHandlers) return false; calculatorSubmit();return false;" data-cf-modified-bc9098c264be72f0b9fe746f-="">
+  <div class="amount form-group">
+  <label>Amount : <input type="number" name="sum" id="sum" step="0.01" min="0" value=""></label>
+  </div>
+  <div class="form-group">
+  <input type="radio" name="action" value="v" id="formactv" checked><label for="formactv">
+  Include
+  VAT </label>
+  <input type="radio" name="action" value="n" id="formactn"><label for="formactn"> Exclude
+  VAT </label>
+  <input type="number" size="6" min="0" step="0.01" name="vat" id="vat" value="5"> <label id="vatper" style="display: none;"> %</label>
+  <input type="submit" class="calculatebutton" value="Calculate">
+  </div>
+  <p>Calculate UAE VAT : <b>Calculate net amount tax </b> with or without VAT in one click .
+  </p>
+  <div class="clearfix"></div>
+  </form>
+  </section>
+  <section id="results" class="padding clearfix"></section>
+  </div>
+  <div class="col-lg-4">
+  <h2>VAT News</h2>
+  </div>
+  </div>
+  </div>
+  <footer class="footer mt-auto py-3 ">
+  <div class="container">
+  <hr>
+  <p> Above VAT Calculator for reference purpose only . You are using this website at your own risk. We
+  are not
+  responsible any loses. </p>
+  Made with <img src="https://vat201.com/images/heart.svg" alt="heart" size width="15px" height="15px"> in UAE By <a href="https://madinadeals.com" target="_blank">Madina Deals</a> Team . Hosted on <a href="https://firebase.google.com" target="_blank">Firebase</a> . SSL and CDN by <a href="https://cloudflare.com" target="_blank">Cloudflare</a>.
+  </div>
+  </footer>
+  
 
 {% endblock %}
